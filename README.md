@@ -1,1 +1,1 @@
-# Silence is gold ![N|Silence](/assets/silencioso.png)
+# Silence is gold ![Silence](/assets/silencioso.png)
