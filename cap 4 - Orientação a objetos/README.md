@@ -20,7 +20,7 @@ type(3)
 ```
 > &lt;class 'int'&gt;
 
-É importante você saber que todos os identificadores em Python são considerados objetos (Variáveis, Funções, Classes). Sendo assim, possuem métodos, atributos, são instanciados de acordo com a sua classe assim como qualquer linguagem Orientada a Objetos. Se você ainda não conhece sobre orientação a objetos, ou ainda não tem dominio sobre o assunto, mais adiante serão apresentados esses conceitos.
+É importante você saber que todos os identificadores em Python são considerados objetos (Variáveis, Funções, Classes). Sendo assim, possuem métodos, atributos, são instanciados de acordo com a sua classe assim como qualquer linguagem Orientada a Objetos.
 
 ```python
 a = 3
@@ -44,24 +44,72 @@ dir(identificador)
 ```
 
 ### Criando Classes
-Para demonstrar o funcionamento da orientação a objeto, serão apresentados os conceitos e uma comparação com a linguagem Java, por ser um exemplo comum de Orientação a objetos.
+Para demonstrar o funcionamento da orientação a objeto, serão apresentadas comparação com a linguagem Java, comum, por ser um exemplo comum de Orientação a objetos.
 
 **Objetos** nada mais são do que Instancias de uma Classe. **Classes** são a base, ou o molde, de como serão os objetos que serão feitos dela. **Instancias** são como se fossem _unidades_ de um tipo, ou uma classe. Cada unidade possui _caracteristicas próprias_, ou **Atributos**,  mas sempre terá _comportamentos_, ou **Métodos**,  iguais às outras _unidades_ do mesmo tipo, ou seja, sempre terá **Métodos** iguais aos outros **Objetos** da mesma **Classe**.
 
-Para entender melhor esse conceito, podemos usar uma metáfora. Os **objetos** são como _bolos_, feitos em uma _forma_ que seria a representação de uma **Classe**. Sempre, os _bolos_ feitos em uma _forma_ apresentarão o mesmo formato. Todos também sempre serão cortados e comidos do mesmo jeito, mas poderão ter sabores, textura de massa, cobertura diferentes. Os sabores são definidos pelos ingredientes que são batidos juntos em uma batedeira e postos sempre do mesmo jeito.
+Objetos possuem **Construtores** que são chamados ao criar o objeto para realizar as primeiras operações. São usados para inicializar o objeto, de acordo com a necessidade. Mais adiante será explicado mais a fundo.
 
-<!-- Imagem do bolo e da forma -->
+A baixo, segue o código para a criação de uma Classe em Java e em Python.
 
-Trazendo da metáfora (antes que você fique com fome), como dito, a _forma_ é como se fosse a **Classe**, e _cada bolo_ feito nessa forma é como um **Objeto** dessa Classe, ou uma **Instância** dessa Classe. 
+##### Java
+```Java
+class PrimeiraClasse{
 
-O jeito de cortar, ou o jeito de comer, são os _Comportamentos_ dos bolos que são feitos nessa forma. Assim como, cada objeto feito de uma Classe possuirá **métodos** definidos pela Classe. Os métodos são funções específicas de uma classe de objetos. Mais adiante serão explicados os tipos diferentes de métodos, e como eles funcionam.
+}
 
-Sabores, textura de massa, cobertura, são _caracteristicas_ que não são definidas pela forma, e sim pelos ingredientes que são postos nela. Sendo assim, cada bolo poderá ter essas casacterísticas diferentes. Objetos possuem **Atributos**, e esses, do mesmo jeito que o sabor do bolo, são independentes em relação aos outros objetos. Atributos são definidos no objeto como variáveis que são parte do objeto. É como se estivessem, metaforicamente, "dentro" do objeto.
+class SegundaClasse{
+	public SegundaClasse(String attr){
+		// Contrutor em java 
+		// método com o mesmo nome da classe
+	}
+}
+```
+##### Python
+```python
+class PrimeiraClasse:
+	pass
 
-O bolo é feito ao bater os ingredientes numa batedeira, passada a massa para forma e posto para assar. Esse processo no bolo é chamado de fazer o bolo, mas em Orientação a Objetos é conhecido como Construir o bolo, ou qualquer objeto. Para construir um objeto, é chamado o construtor desse classe. Nele são especificados como os ingredientes deverão ser misturados para construir o novo objeto. Ao final, o objeto, a instancia, ou o bolo, é devolvido como resultado.
+class SegundaClasse:
+	def __init__(attr):
+		# Contrutor em Python
+		# método com o nome '__init__'
+	
+```
 
-Em linguagens de programação, para trabalhar com objetos, do mesmo jeito que com bolos, a primeira coisa a ser feita é a forma. A baixo, segue o código para a criação de uma Classe em Java e em Python.
+### Instanciando Classes
+Com a classe criada, instanciar objetos é um processo igual ou semelhante à criação de qualquer outra variável. Deve ser escolhido um identificador, ou uma estrutura de dados, que receberá o objeto criado. Nessa criação podem ser passados parametros de criação. Na subseção contrutor da seção métodos mágicos será explicado definí-los.
 
+Seguem alguns exemplos de instanciação de objetos em Java e em Python.
+
+##### Java
+```Java
+...
+PrimeiraClasse pc = new PrimeiraClasse();
+SegundaClasse sc = new SegundaClasse("Classe xingling");
+...
+```
+##### Python
+```python
+...
+pc = PrimeiraClasse()
+sc = SegundaClasse("Classe xingling")
+...
+
+```
+### Atributos
+
+Classes podem possuir atributos. Atributos são variáveis que se encontram "dentro" do objeto ou da classe, dependendo desses para serem acessados. Existem dois tipos de atributo:
+ - Dinâmicos ou de Objetos
+ - Estáticos ou de Classe
+
+Atributos Dinâmicos são os pertencem ao objeto. Cada objeto poderá ter valores diferentes para cada atributo dinâmico. Para ser acessado, deve ser vinculado a um objeto instanciado da Classe.
+
+Atributos Estáticos são os que pertencem à Classe. São variaveis que se encontram dentro do contexto da Classe, mas se comportam como variáveis globais. Podem ser alteradas, mas sempre terá o mesmo valor independentemente de qual objeto a referencie.
+
+
+
+##### Java
 ```Java
 class Forma{                    // Criação da classe
 	public String sabor;        // Criação do atributo 1
@@ -85,6 +133,7 @@ class Forma{                    // Criação da classe
 }
 ```
 
+##### Python
 ```python
 class Forma:                                # Criação da classe
 	def __init__(self, sabor, cobertura):   # Definição do contrutor
@@ -100,4 +149,9 @@ class Forma:                                # Criação da classe
         		+ self.sabor)
 ```
 
-Observe que ao definir a classe, são definidos os métodos, os atributos e nesse caso também o construtor. Para efeito de comparação, o mesmo código será 
+##### Java
+```Java
+```
+##### Python
+```python
+```
