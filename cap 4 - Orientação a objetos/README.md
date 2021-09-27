@@ -1,6 +1,6 @@
-![POO](/assets/poo.png)
-
 # Orientação a Objetos em Python
+
+![POO](/assets/poo.png)
 
 A essa altura do curso, você já deve saber:
 - como criar e operar variáveis em Python
@@ -55,7 +55,6 @@ A baixo, segue o código para a criação de uma Classe em Java e em Python.
 ##### Java
 ```Java
 class PrimeiraClasse{
-
 }
 
 class SegundaClasse{
@@ -71,11 +70,15 @@ class PrimeiraClasse:
 	pass
 
 class SegundaClasse:
-	def __init__(attr):
+	def __init__(self, attr):
 		# Contrutor em Python
 		# método com o nome '__init__'
 	
 ```
+
+A estrutura de criação de Classes é muito semelhante à criação de funções em Python. A sintaxe do python de definir inicio de um bloco de código pelo caractere ':' e o comprimento do bloco pela identação ainda se aplica aqui.
+
+Quanto à diferença do construtor, em python o contrutor é criado ao criar um método com o nome **\_\_init\_\_**. O parâmetro **self** no construtor será explicado melhor posteriormente, mas por hora, digamos que faça parte da sintaxe.
 
 ### Instanciando Classes
 Com a classe criada, instanciar objetos é um processo igual ou semelhante à criação de qualquer outra variável. Deve ser escolhido um identificador, ou uma estrutura de dados, que receberá o objeto criado. Nessa criação podem ser passados parametros de criação. Na subseção contrutor da seção métodos mágicos será explicado definí-los.
@@ -97,6 +100,9 @@ sc = SegundaClasse("Classe xingling")
 ...
 
 ```
+
+Observe a diferença de sintaxe. Em python, da mesma forma que antes, os tipos não são anunciados, apenas atribuidos, graças à Tipagem Dinâmica do Python. A palavra reservada **new** de outras linguagens não se aplica a python.
+
 ### Atributos
 
 Classes podem possuir atributos. Atributos são variáveis que se encontram "dentro" do objeto ou da classe, dependendo desses para serem acessados. Existem dois tipos de atributo:
@@ -107,7 +113,32 @@ Atributos Dinâmicos são os pertencem ao objeto. Cada objeto poderá ter valore
 
 Atributos Estáticos são os que pertencem à Classe. São variaveis que se encontram dentro do contexto da Classe, mas se comportam como variáveis globais. Podem ser alteradas, mas sempre terá o mesmo valor independentemente de qual objeto a referencie.
 
+A seguir, serão apresentados os dois tipos de atributos para as linguagens Java e Python.
+##### Java
+```Java
+class PrimeiraClasse{
+	public static String atributoEstatico;
+	public String atributoDinamico;
+}
+```
+##### Python
+```python
+class PrimeiraClasse:
+	atributoEstatico = ""
 
+	def __init__(self, attr):
+		self.atributoDinamico = attr
+```
+
+A palafra **self** em Python faz um trabalho parecido com o **this** em Java. Refere-se sempre à instancia do objeto nos métodos dinâmicos, e também nos contrutores.
+
+Atributos Dinâmicos em Python são criados ao chamar atraves de um objeto, um identificador ainda não usado, e atribuir a este algum valor.
+
+Pelo fato de python ser de Tipagem Dinâmica, atributos dinâmicos podem ser criados a qualquer momento após a instanciação, dentro ou fora da classe. Diferentemente de Java que os atributos são previamente definidos na classe, e sua quantidade e tipos não podem ser alterados.
+
+Neste caso, como o atributo foi criado no contrutor, todos os objetos dessa classe terão esse atributo.
+
+### Métodos
 
 ##### Java
 ```Java
@@ -148,6 +179,34 @@ class Forma:                                # Criação da classe
 		return ("Comemos o bolo de " 
         		+ self.sabor)
 ```
+
+### Métodos mágicos
+
+##### Java
+```Java
+```
+##### Python
+```python
+```
+
+### Encapsulamento
+
+##### Java
+```Java
+```
+##### Python
+```python
+```
+
+### Herança
+
+##### Java
+```Java
+```
+##### Python
+```python
+```
+### Outras Diferenças
 
 ##### Java
 ```Java
