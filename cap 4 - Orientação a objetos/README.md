@@ -61,14 +61,14 @@ O bolo é feito ao bater os ingredientes numa batedeira, passada a massa para fo
 Em python, para trabalhar com objetos, do mesmo jeito que com bolos, a primeira coisa a ser feita é a forma.
 
 ```python
-class Forma:								# Criação da classe
-	def __init__(self, sabor, cobertura): 	# Definição do contrutor
-		self.sabor = sabor 					# Criação do atributo 1
-		self.cobertura = cobertura 			# Criação do atributo 2
+class Forma:                                # Criação da classe
+	def __init__(self, sabor, cobertura):   # Definição do contrutor
+		self.sabor = sabor                  # Criação do atributo 1
+		self.cobertura = cobertura          # Criação do atributo 2
 
-	def cortar(self): 						# Criação do método 1
+	def cortar(self):                       # Criação do método 1
 		return "Cortamos o bolo de " + self.sabor
 
-	def comer(self): 						# Criação do método 2
+	def comer(self):                        # Criação do método 2
 		return "Comemos o bolo de " + self.sabor
 ```
