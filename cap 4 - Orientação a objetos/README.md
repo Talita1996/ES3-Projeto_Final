@@ -58,38 +58,55 @@ Sabores, textura de massa, cobertura, são _caracteristicas_ que não são defin
 
 O bolo é feito ao bater os ingredientes numa batedeira, passada a massa para forma e posto para assar. Esse processo no bolo é chamado de fazer o bolo, mas em Orientação a Objetos é conhecido como Construir o bolo, ou qualquer objeto. Para construir um objeto, é chamado o construtor desse classe. Nele são especificados como os ingredientes deverão ser misturados para construir o novo objeto. Ao final, o objeto, a instancia, ou o bolo, é devolvido como resultado.
 
-Em linguagens de programação, para trabalhar com objetos, do mesmo jeito que com bolos, a primeira coisa a ser feita é a forma. Em **Java**, uma Classe pode ser criada como mostrado a seguir:
+Em linguagens de programação, para trabalhar com objetos, do mesmo jeito que com bolos, a primeira coisa a ser feita é a forma. A baixo, segue o código para a criação de uma Classe em Python, do lado esquerdo, e em Java, do lado direito.
+<table border="0">
+ <tr>
+    <td><b style="font-size:30px">Python</b></td>
+    <td><b style="font-size:30px">Java</b></td>
+ </tr>
+ <tr>
+    <td>
 
-~~~Java
-class Forma{                                // Criação da classe
-	public String sabor;                    // Criação do atributo 1
-	public String cobertura;                // Criação do atributo 2
-
-	public Forma(String sabor, String cobertura){ // Definição do contrutor
-		this.sabor = sabor;
-		this.cobertura = cobertura;
-	}
-
-	public String cortar(){                       // Criação do método 1
-		return "Cortamos o bolo de " + self.sabor;
-	}
-
-	public String comer(){                        // Criação do método 2
-		return "Comemos o bolo de " + self.sabor;
-	}
-}
-~~~
-~~~python
+```python
 class Forma:                                # Criação da classe
 	def __init__(self, sabor, cobertura):   # Definição do contrutor
 		self.sabor = sabor                  # Criação do atributo 1
 		self.cobertura = cobertura          # Criação do atributo 2
 
 	def cortar(self):                       # Criação do método 1
-		return "Cortamos o bolo de " + self.sabor
+		return ("Cortamos o bolo de " 
+        		+ self.sabor)
 
 	def comer(self):                        # Criação do método 2
-		return "Comemos o bolo de " + self.sabor
-~~~
+		return ("Comemos o bolo de " 
+        		+ self.sabor)
+```
+	</td>
+    <td>
+```Java
+class Forma{                    // Criação da classe
+	public String sabor;        // Criação do atributo 1
+	public String cobertura;    // Criação do atributo 2
+
+	// Definição do contrutor
+	public Forma(String sabor, String cobertura){ 
+		this.sabor = sabor;
+		this.cobertura = cobertura;
+	}
+
+	public String cortar(){     // Criação do método 1
+		return "Cortamos o bolo de " 
+        		+ self.sabor;
+	}
+
+	public String comer(){      // Criação do método 2
+		return "Comemos o bolo de " 
+        		+ self.sabor;
+	}
+}
+```
+	</td>
+ </tr>
+</table>
 
 Observe que ao definir a classe, são definidos os métodos, os atributos e nesse caso também o construtor. Para efeito de comparação, o mesmo código será 
