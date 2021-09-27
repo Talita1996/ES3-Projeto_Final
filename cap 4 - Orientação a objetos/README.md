@@ -44,21 +44,21 @@ dir(identificador)
 ### Criando Classes
 Para demonstrar o funcionamento da orientação a objeto, serão apresentados os conceitos e uma comparação com a linguagem Java, por ser um exemplo comum de Orientação a objetos.
 
-*Objetos* nada mais são do que Instancias de uma Classe. *Classes* são a base, ou o molde, de como serão os objetos que serão feitos dela. *Instancias* são como se fossem _unidades_ de um tipo, ou uma classe. Cada unidade possui _caracteristicas próprias_, ou *Atributos*,  mas sempre terá _comportamentos_, ou *Métodos*,  iguais às outras _unidades_ do mesmo tipo, ou seja, sempre terá *Métodos* iguais aos outros *Objetos* da mesma *Classe*.
+**Objetos** nada mais são do que Instancias de uma Classe. **Classes** são a base, ou o molde, de como serão os objetos que serão feitos dela. **Instancias** são como se fossem _unidades_ de um tipo, ou uma classe. Cada unidade possui _caracteristicas próprias_, ou **Atributos**,  mas sempre terá _comportamentos_, ou **Métodos**,  iguais às outras _unidades_ do mesmo tipo, ou seja, sempre terá **Métodos** iguais aos outros **Objetos** da mesma **Classe**.
 
-Para entender melhor esse conceito, podemos usar uma metáfora. Os *objetos* são como _bolos_, feitos em uma _forma_ que seria a representação de uma *Classe*. Sempre, os _bolos_ feitos em uma _forma_ apresentarão o mesmo formato. Todos também sempre serão cortados e comidos do mesmo jeito, mas poderão ter sabores, textura de massa, cobertura diferentes. Os sabores são definidos pelos ingredientes que são batidos juntos em uma batedeira e postos sempre do mesmo jeito.
+Para entender melhor esse conceito, podemos usar uma metáfora. Os **objetos** são como _bolos_, feitos em uma _forma_ que seria a representação de uma **Classe**. Sempre, os _bolos_ feitos em uma _forma_ apresentarão o mesmo formato. Todos também sempre serão cortados e comidos do mesmo jeito, mas poderão ter sabores, textura de massa, cobertura diferentes. Os sabores são definidos pelos ingredientes que são batidos juntos em uma batedeira e postos sempre do mesmo jeito.
 
 <!-- Imagem do bolo e da forma -->
 
-Trazendo da metáfora (antes que você fique com fome), como dito, a _forma_ é como se fosse a *Classe*, e _cada bolo_ feito nessa forma é como um *Objeto* dessa Classe, ou uma *Instância* dessa Classe. 
+Trazendo da metáfora (antes que você fique com fome), como dito, a _forma_ é como se fosse a **Classe**, e _cada bolo_ feito nessa forma é como um **Objeto** dessa Classe, ou uma **Instância** dessa Classe. 
 
-O jeito de cortar, ou o jeito de comer, são os _Comportamentos_ dos bolos que são feitos nessa forma. Assim como, cada objeto feito de uma Classe possuirá *métodos* definidos pela Classe. Os métodos são funções específicas de uma classe de objetos. Mais adiante serão explicados os tipos diferentes de métodos, e como eles funcionam.
+O jeito de cortar, ou o jeito de comer, são os _Comportamentos_ dos bolos que são feitos nessa forma. Assim como, cada objeto feito de uma Classe possuirá **métodos** definidos pela Classe. Os métodos são funções específicas de uma classe de objetos. Mais adiante serão explicados os tipos diferentes de métodos, e como eles funcionam.
 
-Sabores, textura de massa, cobertura, são _caracteristicas_ que não são definidas pela forma, e sim pelos ingredientes que são postos nela. Sendo assim, cada bolo poderá ter essas casacterísticas diferentes. Objetos possuem *Atributos*, e esses, do mesmo jeito que o sabor do bolo, são independentes em relação aos outros objetos. Atributos são definidos no objeto como variáveis que são parte do objeto. É como se estivessem, metaforicamente, "dentro" do objeto.
+Sabores, textura de massa, cobertura, são _caracteristicas_ que não são definidas pela forma, e sim pelos ingredientes que são postos nela. Sendo assim, cada bolo poderá ter essas casacterísticas diferentes. Objetos possuem **Atributos**, e esses, do mesmo jeito que o sabor do bolo, são independentes em relação aos outros objetos. Atributos são definidos no objeto como variáveis que são parte do objeto. É como se estivessem, metaforicamente, "dentro" do objeto.
 
 O bolo é feito ao bater os ingredientes numa batedeira, passada a massa para forma e posto para assar. Esse processo no bolo é chamado de fazer o bolo, mas em Orientação a Objetos é conhecido como Construir o bolo, ou qualquer objeto. Para construir um objeto, é chamado o construtor desse classe. Nele são especificados como os ingredientes deverão ser misturados para construir o novo objeto. Ao final, o objeto, a instancia, ou o bolo, é devolvido como resultado.
 
-Em linguagens de programação, para trabalhar com objetos, do mesmo jeito que com bolos, a primeira coisa a ser feita é a forma. Em *Java*, uma Classe pode ser criada como mostrado a seguir:
+Em linguagens de programação, para trabalhar com objetos, do mesmo jeito que com bolos, a primeira coisa a ser feita é a forma. Em **Java**, uma Classe pode ser criada como mostrado a seguir:
 
 ##### Java
 ```Java
