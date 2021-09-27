@@ -60,8 +60,7 @@ O bolo é feito ao bater os ingredientes numa batedeira, passada a massa para fo
 
 Em linguagens de programação, para trabalhar com objetos, do mesmo jeito que com bolos, a primeira coisa a ser feita é a forma. Em **Java**, uma Classe pode ser criada como mostrado a seguir:
 
-##### Java
-```Java
+~~~Java
 class Forma{                                // Criação da classe
 	public String sabor;                    // Criação do atributo 1
 	public String cobertura;                // Criação do atributo 2
@@ -79,9 +78,8 @@ class Forma{                                // Criação da classe
 		return "Comemos o bolo de " + self.sabor;
 	}
 }
-```
-##### Python
-```python
+~~~
+~~~python
 class Forma:                                # Criação da classe
 	def __init__(self, sabor, cobertura):   # Definição do contrutor
 		self.sabor = sabor                  # Criação do atributo 1
@@ -92,6 +90,6 @@ class Forma:                                # Criação da classe
 
 	def comer(self):                        # Criação do método 2
 		return "Comemos o bolo de " + self.sabor
-```
+~~~
 
 Observe que ao definir a classe, são definidos os métodos, os atributos e nesse caso também o construtor. Para efeito de comparação, o mesmo código será 
