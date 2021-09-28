@@ -8,6 +8,7 @@ A essa altura do curso, você já deve saber:
 - como criar e usar funções em Python
 
 Neste módulo, você aprenderá sobre como funciona a orientação a objetos em Python. Verá:
+ - Uma introdução sobre Orientação a Objetos em Python
  - Como criar classes em Python
  - Como intanciar classes em Python
  - Como criar e usar atributos em Python
