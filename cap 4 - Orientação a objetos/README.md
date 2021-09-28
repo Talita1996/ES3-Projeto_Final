@@ -148,6 +148,8 @@ Métodos dinâmicos são funções que só podem ser chamadas quando vinculadas 
 
 Métodos estáticos são funções que não precisam estar vinculadas a um objeto. Podem ser chamados atraves dos objetos ou também pelo identificador da própria classe.
 
+A seguir são apresentados os dois tipos de métodos nas linguagens Java e Python
+
 ##### Java
 ```Java
 class QuartaClasse{
@@ -185,33 +187,230 @@ print(QuartaClasse.metodoDinamico(o))
 > Este é um método dinâmico <br>
 > Este é um método dinâmico
 
-### Métodos mágicos
-
-##### Java
-```Java
-```
-##### Python
-```python
-```
-
 ### Encapsulamento
 
+Encapsulamento é um dos coneitos base da Orientação a Objetos. Consiste em tornar atributos ou métodos inacessíveis no contexto externo ao próprio objeto ou classe. O encapsulamento permite definir um atributo ou método como 
+ - privado, 
+ - protegido ou 
+ - público.
+
+Os publicos são livremente acessados por qualquer contexto.
+
+Os privados são acessados unicamente dentro dos métodos da própria classe.
+
+Os protegidos são acessiveis pelo pacote que a classe se encontra, mas não fora dele.
+
+O python usa uma convenção de métodos protegidos conterem "_" no inicio do nome, enquanto os privados contém "__". 
+
+O acesso à atributos protegidos ou privados pode ser feito atraves dos métodos do objeto. Para esse fim, quando a funcionalidade é direta sobre os atributos, pode ser criado métodos especiais chamados comumente de GET/SET.
+
+A seguir são apresentados os três tipos de encapsulamento e os dois métodos e os dois métodos de acesso em Java e Python.
+
 ##### Java
 ```Java
+class QuintaClasse{
+	public String atributoPublico;
+	private String atributoPrivado;
+	protected String atributoProtegido;
+
+	public String getAtributoPublico(){
+		return this.atributoPublico;
+	}
+
+	public void setAtributoPublico(String atributoPublico){
+		this.atributoPublico = atributoPublico;
+	}
+
+	public String getAtributoPrivado(){
+		return this.atributoPrivado;
+	}
+
+	public void setAtributoPrivado(String atributoPrivado){
+		this.atributoPrivado = atributoPrivado;
+	}
+
+	public String getAtributoProtegido(){
+		return this.atributoProtegido;
+	}
+
+	public void setAtributoProtegido(String atributoProtegido){
+		this.atributoProtegido = atributoProtegido;
+	}
+}
 ```
 ##### Python
 ```python
+class QuintaClasse:
+	def __init__():
+		atributoPublico = ""
+		__atributoPrivado = ""
+		_atributoProtegido = ""
+	
+	@property
+    def atributoPrivado(self): 
+        return self.__atributoPrivado
+
+    @atributoPrivado.setter
+    def atributoPrivado(self, atributoPrivado):
+		self.__atributoPrivado = atributoPrivado
+
+	@property
+    def atributoPrivado(self): 
+        return self.__atributoPrivado
+
+    @atributoPrivado.setter
+    def atributoPrivado(self, atributoPrivado):
+		self.__atributoPrivado = atributoPrivado
 ```
 
+Já foi comentado neste curso sobre o jeito pytonianico de fazer as coisas. Há um detalhe muito importante sobre isso que precisa ser mostrado neste momento, mas mais detalhes sobre isso serão mostrados mais adiante. Para entender essa diferença, observe o uso dos GET/SET e dos atributos abaixo.
+
+##### Java
+```Java
+...
+QuintaClasse qc = new QuintaClasse();
+
+qc.atributoPublico = "publico";
+qc.atributoPrivado = "privado"; // Gera erro
+qc.atributoProtegido = "protegido"; // Gera erro
+
+qc.setAtributoPublico = "Publico";
+qc.setAtributoPrivado = "Privado";
+qc.setAtributoProtegido = "Protegido";
+
+System.out.println(qc.atributoPublico);
+System.out.println(qc.getAtributoPublico());
+System.out.println(qc.getAtributoPrivado());
+System.out.println(qc.getAtributoProtegido());
+System.out.println(qc.atributoProtegido); // Gera Erro
+System.out.println(qc.atributoPrivado); // Gera Erro
+...
+```
+##### Python
+```python
+qc = QuintaClasse()
+
+qc.atributoPublico = "Publico"
+
+qc.__atributoPrivado = "privado" # Gera Erro
+qc._atributoProtegido = "protegido" # não gera erro
+
+qc.atributoPrivado = "Privado"
+qc.atributoProtegido = "Protegido"
+
+print(qc.atributoPublico)
+print(qc.atributoPrivado)
+print(qc.atributoProtegido)
+print(qc._atributoProtegido) # Não gera erro
+print(qc.__atributoPrivado) # Gera Erro
+```
+
+Nessa comparação, pode ser observado que a forma de chamar os métodos Get/Set na linguagem python se altera nativamente. Nele, a chamada do método como se fosse um atributo realiza a operação, de get ou de set. Os atributos ou métodos privados são identificados pelos caracteres '__' no inicio do nome. Já os protegidos, em Python, são apenas uma convenção de boas práticas, no qual não se indica iniciar nomes de atributos e métodos com '_' a não ser que não sejam para ser acessados externamente. Dessa forma, não há uma restrição técnica para o uso de métodos ou atributos iniciados por '_' e convencionados como protegidos, apenas uma indicação para não fazer isso.
+
+Pelo fato dos métodos GET/SET serem usados dessa forma, em python não se faz get/set para atributos públicos, como pode ser feito para o Java, por mais que em ambos os casos não seja uma prática indicada.
 ### Herança
 
+Herança é o conceito de orientação a objetos que vincula todas as caracteristicas de uma classe a outra, tendo o foco na reutilização de códigos e modularização de recursos.
+
+Basicamente, todas os atributos e métodos que pertencem a uma Classe herdada, passam a pertencer à classe que herdou. Os métodos podem ser sobrescritos, definindo comportamentos específicos para as classes que recebem a herança.
+
+A seguir são apresentados os exemplos de herança para as linguagens Java e Python.
+
+##### Java
+```Java
+class ClassePai{
+	public String metodoDoPai(){
+		return "Método do pai";
+	}
+
+	public String posicaoFamiliar(){
+		return "Pai";
+	}
+}
+
+class ClasseFilha{
+	public String metodoDoFilho(){
+		return "Método do filho";
+	}
+
+	public String posicaoFamiliar(){
+		return "Filho";
+	}
+}
+```
+##### Python
+```python
+class ClassePai:
+	def metodoDoPai(self):
+		return "Método do pai"
+	
+	def posicaoFamiliar():
+		return "Pai"
+
+class ClasseFilha:
+	def metodoDoFilho(self):
+		return "Método do Filho"
+	
+	def posicaoFamiliar():
+		return "Filho"
+```
+
+O uso de ambos os casos é equivalente em todos os aspectos, o exemplo de utilização é apresentado abaixo:
+
+##### Java
+```Java
+...
+ClassePai cp = new ClassePai();
+ClasseFilha cf = new ClasseFilha();
+
+System.out.println(cp.metodoDoPai());
+
+System.out.println(cf.metodoDoPai()); // Método Herdado
+System.out.println(cf.metodoDoFilho());
+
+System.out.println(cp.PosicaoFamiliar());
+System.out.println(cf.PosicaoFamiliar()); // Método Sobrescrito
+...
+```
+> Método do pai<br>
+> Método do pai<br>
+> Método do Filho<br>
+> Pai<br>
+> Filho<br>
+##### Python
+```python
+...
+cp = ClassePai()
+cf = ClasseFilha()
+
+print(cp.metodoDoPai())
+
+print(cf.metodoDoPai()) # Método Herdado
+print(cf.metodoDoFilho())
+
+print(cp.PosicaoFamiliar())
+print(cf.PosicaoFamiliar()) # Método Sobrescrito
+...
+```
+> Método do pai<br>
+> Método do pai<br>
+> Método do Filho<br>
+> Pai<br>
+> Filho<br>
+### Outras Diferenças
+
+#### Polimorfismo
+
+#### Sobrecarga
+
+#### Métodos mágicos
+
 ##### Java
 ```Java
 ```
 ##### Python
 ```python
 ```
-### Outras Diferenças
 	
 ##### Java
 ```Java
