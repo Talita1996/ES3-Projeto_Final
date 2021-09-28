@@ -11,8 +11,8 @@ Neste módulo, você aprenderá sobre como funciona a orientação a objetos em 
 
 ```python
 class  FirstClass:
-	def  helloWorld():
-		return  "Olá! Eu um objeto!"
+    def  helloWorld():
+        return  "Olá! Eu um objeto!"
 ```
 Por princípio, entenda, Python incorpora ao menos três paradigmas de programação. A Programação imperativa, e A Funcional são dois deles, mas o principal, no qual todas as bases da linguagem se instala é a Programação Orientada a Objetos.
 ```python
@@ -38,7 +38,7 @@ dir(identificador)
 ```
 ```python
 def identificador():
-	return "Hello World"!
+    return "Hello World"!
 type(identificador)
 dir(identificador)
 ```
@@ -58,22 +58,22 @@ class PrimeiraClasse{
 }
 
 class SegundaClasse{
-	public SegundaClasse(String attr){
-		// Contrutor em java 
-		// método com o mesmo nome da classe
-	}
+    public SegundaClasse(String attr){
+        // Contrutor em java 
+        // método com o mesmo nome da classe
+    }
 }
 ```
 ##### Python
 ```python
 class PrimeiraClasse:
-	pass
+    pass
 
 class SegundaClasse:
-	def __init__(self, attr):
-		# Contrutor em Python
-		# método com o nome '__init__'
-	
+    def __init__(self, attr):
+        # Contrutor em Python
+        # método com o nome '__init__'
+    
 ```
 
 A estrutura de criação de Classes é muito semelhante à criação de funções em Python. A sintaxe do python de definir inicio de um bloco de código pelo caractere ':' e o comprimento do bloco pela identação ainda se aplica aqui.
@@ -117,17 +117,17 @@ A seguir, serão apresentados os dois tipos de atributos para as linguagens Java
 ##### Java
 ```Java
 class TerceiraClasse{
-	public static String atributoEstatico;
-	public String atributoDinamico;
+    public static String atributoEstatico;
+    public String atributoDinamico;
 }
 ```
 ##### Python
 ```python
 class TerceiraClasse:
-	atributoEstatico = ""
+    atributoEstatico = ""
 
-	def __init__(self, attr):
-		self.atributoDinamico = attr
+    def __init__(self, attr):
+        self.atributoDinamico = attr
 ```
 
 A palafra **self** em Python faz um trabalho parecido com o **this** em Java. Refere-se sempre à instancia do objeto nos métodos dinâmicos, e também nos contrutores.
@@ -154,25 +154,25 @@ A seguir são apresentados os dois tipos de métodos nas linguagens Java e Pytho
 ```Java
 class QuartaClasse{
 
-	public String metodoDinamico(){     // Criação do método 1
-		return "Este é um método dinâmico"
-	}
+    public String metodoDinamico(){     // Criação do método 1
+        return "Este é um método dinâmico"
+    }
 
-	public static String metodoEstatico(){      // Criação do método 2
-		return "Este é um método estático"
-	}
+    public static String metodoEstatico(){      // Criação do método 2
+        return "Este é um método estático"
+    }
 }
 ```
 
 ##### Python
 ```python
 class QuartaClasse:                                # Criação da classe
-	def metodoDinamico(self):     # Criação do método 1
-		return "Este é um método dinâmico"	
-	#@staticmethod
-	def metodoEstatico():         # Criação do método 2
-		return "Este é um método estático"
-	
+    def metodoDinamico(self):     # Criação do método dinâmico
+        return "Este é um método dinâmico"    
+    @staticmethod
+    def metodoEstatico():         # Criação do método estático
+        return "Este é um método estático"
+    
 ```
 
 Em python, todos os métodos dinâmicos são de fato representados pelo parametro convencionado **self** passado na primeira posição. O nome **self** pode ser substituido por qualquer outro identificador, mas o padrão do python indica que seja esse nome.
@@ -209,59 +209,61 @@ A seguir são apresentados os três tipos de encapsulamento e os dois métodos e
 ##### Java
 ```Java
 class QuintaClasse{
-	public String atributoPublico;
-	private String atributoPrivado;
-	protected String atributoProtegido;
+    public String atributoPublico;
+    private String atributoPrivado;
+    protected String atributoProtegido;
 
-	public String getAtributoPublico(){
-		return this.atributoPublico;
-	}
+    public String getAtributoPublico(){
+        return this.atributoPublico;
+    }
 
-	public void setAtributoPublico(String atributoPublico){
-		this.atributoPublico = atributoPublico;
-	}
+    public void setAtributoPublico(String atributoPublico){
+        this.atributoPublico = atributoPublico;
+    }
 
-	public String getAtributoPrivado(){
-		return this.atributoPrivado;
-	}
+    public String getAtributoPrivado(){
+        return this.atributoPrivado;
+    }
 
-	public void setAtributoPrivado(String atributoPrivado){
-		this.atributoPrivado = atributoPrivado;
-	}
+    public void setAtributoPrivado(String atributoPrivado){
+        this.atributoPrivado = atributoPrivado;
+    }
 
-	public String getAtributoProtegido(){
-		return this.atributoProtegido;
-	}
+    public String getAtributoProtegido(){
+        return this.atributoProtegido;
+    }
 
-	public void setAtributoProtegido(String atributoProtegido){
-		this.atributoProtegido = atributoProtegido;
-	}
+    public void setAtributoProtegido(String atributoProtegido){
+        this.atributoProtegido = atributoProtegido;
+    }
 }
 ```
 ##### Python
 ```python
 class QuintaClasse:
-	def __init__():
-		atributoPublico = ""
-		__atributoPrivado = ""
-		_atributoProtegido = ""
-	
-	@property
+    def __init__():
+        atributoPublico = ""
+        __atributoPrivado = ""
+        _atributoProtegido = ""
+    
+    @property
     def atributoPrivado(self): 
         return self.__atributoPrivado
 
     @atributoPrivado.setter
     def atributoPrivado(self, atributoPrivado):
-		self.__atributoPrivado = atributoPrivado
+        self.__atributoPrivado = atributoPrivado
 
-	@property
+    @property
     def atributoPrivado(self): 
         return self.__atributoPrivado
 
     @atributoPrivado.setter
     def atributoPrivado(self, atributoPrivado):
-		self.__atributoPrivado = atributoPrivado
+        self.__atributoPrivado = atributoPrivado
 ```
+
+Não foram apresentados métodos com encapsulamento privado ou protegido mas o funcionamento em ambas as linguagens é o mesmo para métodos e atributos.
 
 Já foi comentado neste curso sobre o jeito pytonianico de fazer as coisas. Há um detalhe muito importante sobre isso que precisa ser mostrado neste momento, mas mais detalhes sobre isso serão mostrados mais adiante. Para entender essa diferença, observe o uso dos GET/SET e dos atributos abaixo.
 
@@ -319,40 +321,40 @@ A seguir são apresentados os exemplos de herança para as linguagens Java e Pyt
 ##### Java
 ```Java
 class ClassePai{
-	public String metodoDoPai(){
-		return "Método do pai";
-	}
+    public String metodoDoPai(){
+        return "Método do pai";
+    }
 
-	public String posicaoFamiliar(){
-		return "Pai";
-	}
+    public String posicaoFamiliar(){
+        return "Pai";
+    }
 }
 
 class ClasseFilha{
-	public String metodoDoFilho(){
-		return "Método do filho";
-	}
+    public String metodoDoFilho(){
+        return "Método do filho";
+    }
 
-	public String posicaoFamiliar(){
-		return "Filho";
-	}
+    public String posicaoFamiliar(){
+        return "Filho";
+    }
 }
 ```
 ##### Python
 ```python
 class ClassePai:
-	def metodoDoPai(self):
-		return "Método do pai"
-	
-	def posicaoFamiliar():
-		return "Pai"
+    def metodoDoPai(self):
+        return "Método do pai"
+    
+    def posicaoFamiliar():
+        return "Pai"
 
 class ClasseFilha:
-	def metodoDoFilho(self):
-		return "Método do Filho"
-	
-	def posicaoFamiliar():
-		return "Filho"
+    def metodoDoFilho(self):
+        return "Método do Filho"
+    
+    def posicaoFamiliar():
+        return "Filho"
 ```
 
 O uso de ambos os casos é equivalente em todos os aspectos, o exemplo de utilização é apresentado abaixo:
@@ -411,7 +413,7 @@ print(cf.PosicaoFamiliar()) # Método Sobrescrito
 ##### Python
 ```python
 ```
-	
+    
 ##### Java
 ```Java
 ```
