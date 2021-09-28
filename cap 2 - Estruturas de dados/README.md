@@ -86,6 +86,33 @@ Por outro lado, para remover através do índice podemos utilizar a função `po
 [//]: <> ( A declaração de uma tupla é igual a de uma Lista, com a diferença apenas que devem ser usados parênteses ao invés de colchetes )
 [//]: <> ( Na declaração de uma tupla com apenas 1 item, deve ser colocado uma vírgula após o item senão será interpretado como string )
 
+Tupla é uma estrutura de dados semelhante a lista. Porém, ela tem a característica de ser imutável, ou seja, após uma tupla ser criada, ela não pode ser alterada. Vejamos o uso desse objeto em código:
+
+```python
+>>> transportes = ('carro', 'moto', 'bicicleta', 'ônibus', 'avião')
+>>> print(transportes)
+( 'carro', 'moto', 'bicicleta', 'ônibus', 'avião' )
+```
+
+As tuplas devem ser usadas em situações em que não haverá necessidade de adicionar, remover ou alterar elementos de um grupo de itens. Exemplos bons seriam os meses do ano, os dias da semana, as estações do ano etc. Entretanto, ainda é possível acessar elementos através do índice. Vejamos:
+
+```python
+>>> transportes[2]
+bicicleta
+```
+
+Uma observação a ser feita no uso de uma tupla é que se ela tiver um único item, é necessário colocar uma vírgula depois dele, pois caso contrário, o objeto que vamos obter é uma string, porque o valor do item é do tipo string. 
+
+```python
+>>> objeto_string = ('tesoura')
+>>> objeto_tupla = ('tesoura',)
+
+>>> print(type(objeto_string)) 
+class 'str'
+>>> print(type(objeto_tupla)) 
+class 'tuple'
+```
+
 # Dicionários
 ## Declaração e alteração
 
