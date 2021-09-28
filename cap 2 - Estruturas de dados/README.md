@@ -15,7 +15,7 @@ Uma lista consiste em um conjunto de dados indexados de modo que o valor utiliza
 
 Acima temos uma representação ilustrada de uma lista chamada "nomes" que contém simplesmente os nomes de algumas pessoas. Cada índice (em vermelho) possui como valor (em verde) o nome de alguém. Com esssas informações podemos, por exemplo, imprimir na tela o valor contido na posição 3:
 
-```sh
+```python
 >>> print(nomes[3])
 Maria
 ```
@@ -23,7 +23,7 @@ Maria
 ## Declaração e alteração
 Abaixo é exemplificada a declaração de uma lista com itens e de uma lista vazia:
 
-```sh
+```python
 >>> animais = [ 'gato', 'cachorro', 'peixe' ]
 >>> carros = []
 ```
@@ -31,7 +31,8 @@ Abaixo é exemplificada a declaração de uma lista com itens e de uma lista vaz
 Uma das características de uma lista em Python é que elas são mutáveis, podendo ser alteradas depois de terem sido criadas. Em outras palavras, podemos adicionar, remover e até mesmo alterar os itens de uma lista.
 
 No código a seguir temos um exemplo de como alterar uma lista:
-```sh
+
+```python
 >>> nomes = [ 'Rafael', 'Joana', 'Ana', 'Maria', 'José' ]
 >>> nomes[1] = [ 'Carol' ]
 >>> print(nomes)
@@ -40,9 +41,45 @@ No código a seguir temos um exemplo de como alterar uma lista:
 
 ## Adição de elementos
 [//]: <> ( Métodos append e insert )
+Além de alterar elementos em listas, também é possível adicionar itens nelas, pois já vêm com uma coleção de métodos predefinidos que podem ser usados para manipular os objetos que ela contém.
+
+Trazendo o conceito de pilhas, a função `push()` era utilizada para adicionar um elemento sempre no topo. É exatamente assim que a função `append()` funciona em Python:
+
+```python
+>>> nomes.append('Marília')
+>>> print(nomes)
+[ 'Rafael', 'Carol', 'Ana', 'Maria', 'José', 'Marília' ]
+```
+
+Mas nem sempre queremos simplesmente concatenar valores ao fim da lista. Para lidar com isso, temos também o método `insert()` que recebe dois parâmetros: o índice onde o elemento deve ser adicionado e o valor do elemento.
+
+```python
+>>> nomes.insert(1, 'Marília')
+>>> print(nomes)
+[ 'Rafael', 'Marília', 'Carol', 'Ana', 'Maria', 'José' ]
+```
+
+Observe que o `insert()` "empurra" todos os elementos para uma posição à frente. Dessa forma, "Carol" que possuía indíce 1, passa a ocupar o índice 2, e assim por diante.
 
 ## Remoção de elementos
 [//]: <> ( Métodos remove e pop )
+Assim como podemos adicionar itens em nossa lista, também podemos retirá-los. Existem duas maneiras básicas de se remover elementos em uma lista: através do valor ou através do índice.
+
+A função `remove()` tem como parâmetro o valor do elemento que deve ser removido. Vejamos como retirar "Maria" da nossa lista de nomes:
+
+```python
+>>> nomes.remove('Maria')
+>>> print(nomes)
+[ 'Rafael', 'Marília', 'Carol', 'Ana', 'José' ]
+```
+
+Por outro lado, para remover através do índice podemos utilizar a função `pop()` que recebe como parâmetro a posição do item na lista. Abaixo iremos remover o elemento que está na posição 2:
+
+```python
+>>> nomes.pop(2)
+>>> print(nomes)
+[ 'Rafael', 'Marília', 'Ana', 'José' ]
+```
 
 # Tuplas
 [//]: <> ( Coleção de valores indexados e imutáveis )
