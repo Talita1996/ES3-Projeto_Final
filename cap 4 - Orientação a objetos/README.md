@@ -111,19 +111,19 @@ Classes podem possuir atributos. Atributos são variáveis que se encontram "den
 
 Atributos Dinâmicos são os pertencem ao objeto. Cada objeto poderá ter valores diferentes para cada atributo dinâmico. Para ser acessado, deve ser vinculado a um objeto instanciado da Classe.
 
-Atributos Estáticos são os que pertencem à Classe. São variaveis que se encontram dentro do contexto da Classe, mas se comportam como variáveis globais. Podem ser alteradas, mas sempre terá o mesmo valor independentemente de qual objeto a referencie.
+Atributos Estáticos são os que pertencem à Classe. São variaveis que se encontram dentro do contexto da Classe, mas se comportam como variáveis globais. Podem ser alteradas, mas sempre terá o mesmo valor independentemente de qual objeto a referencie. Podem ser acessados atraves dos objetos ou também pelo identificador da própria classe.
 
 A seguir, serão apresentados os dois tipos de atributos para as linguagens Java e Python.
 ##### Java
 ```Java
-class PrimeiraClasse{
+class TerceiraClasse{
 	public static String atributoEstatico;
 	public String atributoDinamico;
 }
 ```
 ##### Python
 ```python
-class PrimeiraClasse:
+class TerceiraClasse:
 	atributoEstatico = ""
 
 	def __init__(self, attr):
@@ -140,45 +140,50 @@ Neste caso, como o atributo foi criado no contrutor, todos os objetos dessa clas
 
 ### Métodos
 
+Métodos também são chamados de comportamentos de um objeto, são as funções que são criadas dentro da classe para serem usadas atraves do objeto. Assim como os atributos, existem dois tipos de métodos:
+ - Métodos dinâmicos ou de Objeto
+ - Métodos estáticos ou de Classe
+
+Métodos dinâmicos são funções que só podem ser chamadas quando vinculadas à um objeto ou instância da Classe.
+
+Métodos estáticos são funções que não precisam estar vinculadas a um objeto. Podem ser chamados atraves dos objetos ou também pelo identificador da própria classe.
+
 ##### Java
 ```Java
-class Forma{                    // Criação da classe
-	public String sabor;        // Criação do atributo 1
-	public String cobertura;    // Criação do atributo 2
+class QuartaClasse{
 
-	// Definição do contrutor
-	public Forma(String sabor, String cobertura){ 
-		this.sabor = sabor;
-		this.cobertura = cobertura;
+	public String metodoDinamico(){     // Criação do método 1
+		return "Este é um método dinâmico"
 	}
 
-	public String cortar(){     // Criação do método 1
-		return "Cortamos o bolo de " 
-        		+ self.sabor;
-	}
-
-	public String comer(){      // Criação do método 2
-		return "Comemos o bolo de " 
-        		+ self.sabor;
+	public static String metodoEstatico(){      // Criação do método 2
+		return "Este é um método estático"
 	}
 }
 ```
 
 ##### Python
 ```python
-class Forma:                                # Criação da classe
-	def __init__(self, sabor, cobertura):   # Definição do contrutor
-		self.sabor = sabor                  # Criação do atributo 1
-		self.cobertura = cobertura          # Criação do atributo 2
-
-	def cortar(self):                       # Criação do método 1
-		return ("Cortamos o bolo de " 
-        		+ self.sabor)
-
-	def comer(self):                        # Criação do método 2
-		return ("Comemos o bolo de " 
-        		+ self.sabor)
+class QuartaClasse:                                # Criação da classe
+	def metodoDinamico(self):     # Criação do método 1
+		return "Este é um método dinâmico"	
+	#@staticmethod
+	def metodoEstatico():         # Criação do método 2
+		return "Este é um método estático"
+	
 ```
+
+Em python, todos os métodos dinâmicos são de fato representados pelo parametro convencionado **self** passado na primeira posição. O nome **self** pode ser substituido por qualquer outro identificador, mas o padrão do python indica que seja esse nome.
+
+Métodos estáticos não precisam da anotação **@staticmethod**. O que de fato define que um método é dinâmico ou não é o objeto passado no primeiro parâmetro. Na verdade, para o python, as duas formas a seguir de chamar um método são equivalentes.
+
+```Python
+o = QuartaClasse()
+print(o.metodoDinamico())
+print(QuartaClasse.metodoDinamico(o))
+```
+> Este é um método dinâmico
+> Este é um método dinâmico
 
 ### Métodos mágicos
 
@@ -207,7 +212,7 @@ class Forma:                                # Criação da classe
 ```python
 ```
 ### Outras Diferenças
-
+	
 ##### Java
 ```Java
 ```
