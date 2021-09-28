@@ -645,3 +645,7 @@ Neste capítulo você viu sobre Orientação a objetos em Python. Você aprendeu
  - Peculiaridades do Python
 
 Esperamos que agora você possa realizar projetos em python que utilizem orientação a objetos, e com o tempo seja capaz de se tornar fluente na linguagem python.
+
+### Exercícios
+
+Nesta pasta, você vai encontrar alguns arquivos no topo com este texto e com exercicios de fixação para serem executados num interpretador de notebook python. Se não souber utilizar, retorne à página principal, há uma sequencia de intruções para que você seja capaz de importar e executar esses arquivos no [Google Collab](https://colab.research.google.com/).
