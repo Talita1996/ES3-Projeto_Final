@@ -182,7 +182,7 @@ o = QuartaClasse()
 print(o.metodoDinamico())
 print(QuartaClasse.metodoDinamico(o))
 ```
-> Este é um método dinâmico
+> Este é um método dinâmico <br>
 > Este é um método dinâmico
 
 ### Métodos mágicos
