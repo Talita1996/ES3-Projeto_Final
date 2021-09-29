@@ -234,7 +234,7 @@ Esse segundo exemplo está correto "2.0" é um número real, porém vamos imagin
 >>> type(r)
 <type 'int'>
 ```
-## ESSE ARTIFÍCIO É ESSENCIAL NO EXERCÍCIO PROPOSTO NO TÓPICO ANTERIOR DE "OPERADORES"
+**ESSE ARTIFÍCIO É ESSENCIAL NO EXERCÍCIO PROPOSTO NO TÓPICO ANTERIOR DE "OPERADORES"**
 
 <h1>Continue estudando no próximo capítulo</h1>
 
