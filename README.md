@@ -71,6 +71,26 @@ Agora execute no terminal do seu sistema operacional. Para isso, basta acessar o
 >python nome_do_arquivo.py
 ```
 
+### Notebook Python - Google Colab
+
+Uma forma alternativa de executar comandos python é criando um notebook python. Esse é um arquivo que pode conter mais de um script python, além de seções de texto em Markdown. Com isso, fica fácil criar projetos com todas as execuções e explicações em um só local. Também permite explicar um assunto e propor exercicios, que por sinal é o que faremos neste treinamento.
+
+Você pode usar arquivos de notebook python na ferramenta [Google Colab](https://colab.research.google.com/). Essa ferramenta carrega o mesmo principio das outras ferramentas online da Google, como o docs, slides, sheets entre outros.
+
+Lá você poderá criar e editar seus próprios arquivos notebook. Caso você goste da ferramenta e deseje criar os seus próprios arquivos, pode seguir um tutorial para esse fim, como o tutorial da [Kenzie](https://kenzie.com.br/blog/google-colab/), ou qualquer outro que você achar na internet, por mais que desde já possa te dizer que rapidamente você aprenderá, mesmo sozinho, mexendo um pouco na ferramenta.
+
+Neste curso te ensinaremos apenas a importar os notebooks criados para os exercicios do curso, e usá-los. Para isso, você deve acessar o [Google Colab](https://colab.research.google.com/).
+
+![Boas Vindas](/assets/colab-boas-vindas.PNG)
+
+Quando você acessar o colab pela primeira vez, você verá essa tela. Caso você não veja essa tela, clique na aba *Arquivo*, e depois em *Abrir notebook*, ou use o atalho *Ctrl+O*
+
+![Abrir](/assets/colab-arquivo-abrir.PNG)
+
+Quando você estiver na tela de abrir um notebook, você verá uma aba com o nome GitHub. Nela você colocará um link de um repositório que contenha arquivos Notebook Python.
+
+![Importe Github](/assets/colab-github.PNG)
+
 ### Estrutura do curso
 
 O curso é dividido em quatro módulos:
