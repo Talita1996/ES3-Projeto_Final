@@ -114,9 +114,53 @@ class 'tuple'
 ```
 
 # Dicionários
+Os dicionários representam coleções de dados que contém na sua estrutura um conjunto de pares chave/valor, nos quais cada chave individual tem um valor associado. Esse objeto representa a ideia de um mapa, que entendemos como uma coleção associativa desordenada. A associação nos dicionários é feita por meio de uma chave que faz referência a um valor. 
+
 ## Declaração e alteração
+No código abaixo vemos o exemplo de uma declaração de um dicionário:
+
+```python
+>>> dados_cliente = {
+        'Nome': 'Renan',
+        'Endereco': 'Rua Cruzeiro do Sul',
+        'Telefone': '982503645'
+    }
+
+>>> print(dados_cliente['Nome'])
+Renan
+```
+
+A estrutura de um dicionário é delimitada por chaves, entre as quais ficam o conteúdo desse objeto. Veja que é criada a variável dados_cliente, à qual é atribuída uma coleção de dados que, nesse caso, trata-se de um dicionário. No código também imprimimos o conteúdo que é associado ao índice “Nome”, trazendo o resultado Renan.
 
 ## Adição de elementos
+Para adicionar elementos num dicionário basta associar uma nova chave ao objeto e dar um valor a ser associado a ela. A seguir vamos colocar a informação Idade em `dados_cliente`:
+
+```python
+>>> dados_cliente['Idade'] = 40
+
+>>> print(dados_cliente) # 
+{'Nome': 'Renan', 'Endereco': 'Rua Cruzeiro do Sul', 'Telefone': '982503645', 'Idade': 40}
+```
 
 ## Remoção de elementos
+Para remover um item do dicionário, podemos usar o método `pop()`, como vemos a seguir:
+
+```python
+>>> dados_cliente.pop('Telefone', None)
+
+>>> print(dados_cliente) 
+{'Nome': 'Renan', 'Endereco': 'Rua Cruzeiro do Sul'}
+```
+
+O método `pop()` foi usado para remover o item ‘Telefone’ do dicionário dados_clientes. Temos na chamada do método o parâmetro `None`, que é passado depois da chave a ser removida. O `None` serve para que a mensagem de erro `KeyError` não apareça devido a remoção de uma chave inexistente.
+
+Também poderíamos usar a palavra-chave del, que remove uma chave e o valor associado a ela no dicionário. Isso se faz por meio da passagem no parâmetro, como vemos:
+
+```python
+>>> del dados_cliente['Endereco']
+
+>>> print(dados_cliente) 
+{'Nome': 'Renan'}
+```
+
 [//]: <> ( del remove o item em um índice específico e pop remove o item em um índice específico e o retorna )
