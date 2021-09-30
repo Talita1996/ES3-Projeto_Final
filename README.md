@@ -87,9 +87,20 @@ Quando você acessar o colab pela primeira vez, você verá essa tela. Caso voc�
 
 ![Abrir](/assets/colab-arquivo-abrir.PNG)
 
-Quando você estiver na tela de abrir um notebook, você verá uma aba com o nome GitHub. Nela você colocará um link de um repositório que contenha arquivos Notebook Python.
+Quando você estiver na tela de abrir um notebook, você verá uma aba com o nome GitHub. Nela você colocará um link de um repositório que contenha arquivos Notebook Python. No caso, para você acessar os notebooks com os exercicios deste curso, você colocará o link:
+> https://github.com/Talita1996/ES3-Projeto_Final/
+
+Em seguida, clique na lupa ao lado do campo do link para encontrar o repositório.
 
 ![Importe Github](/assets/colab-github.PNG)
+
+Você receberá uma lista dos arquivos notebook inclusos neste curso. Selecione o arquivo referente ao capítulo que você deseja exercitar, ou o solucionário das questões do respectivo capítulo.
+
+Com o notebook aberto, em cada célula de texto, apenas serão vistos os titulos e as demais estruturas virtuais do arquivo markdown. Para editar, basta clicar duas vezes sobre a célula para realizar a edição. Para sair do modo de edição, basta clicar fora da célula.
+
+![colab-celula](/assets/colab-celula.PNG)
+
+No caso das células python, essas podem ser editadas e executadas. Para editar basta clicar sobre a área da célula e escrever seu código python. Para executar, ao passar o mouse sobre a célula, do lado esquerdo,  você verá um botão com o ícone de Play. Ao clicar nesse botão, a célula será executada e a saída será apresentada em baixo da célula.
 
 ### Estrutura do curso
 
