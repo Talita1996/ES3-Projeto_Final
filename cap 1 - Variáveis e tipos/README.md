@@ -216,7 +216,7 @@ Como já foi visto, o Python define o tipo das variáveis pelos valores informad
 ```python
 >>> r = 20/4.0
 >>> r
-2.0
+5.0
 
 >>> type(r)
 <type 'float'>
@@ -225,11 +225,10 @@ Como já foi visto, o Python define o tipo das variáveis pelos valores informad
 Esse segundo exemplo está correto "2.0" é um número real, porém vamos imaginar se eu quisesse que ele truncasse esse valor e o representasse como um inteiro. Não teriamos prejuízo nenhum matematicamente. E existe sim uma possibilidade de fazermos esse "concerto" usando funções que temos disponíveis no python que são nomeadad exatamente com o nome do tipo de variável que você deseja.
 
 - Vamos ver um exemplo, com "concertando" o caso anterior
-  
 ```python
 >>> r = int(20/4.0)
 >>> r
-2
+5
 
 >>> type(r)
 <type 'int'>
