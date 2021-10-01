@@ -1,4 +1,32 @@
-# Capitulo 3
+# Capítulo 3
+
+
+Nesse capítulo você verá:
+- Condicionais
+    - if
+    - else
+    - elif
+- operadores Lógicos
+    - and
+    - or
+    - not
+- Loops
+    - Estrutura de Repetição Loop For
+    - Loops Aninhados
+    - Estrutura de Repetição Loop While
+    - Pass, Break e Continue
+- Métodos
+- Funções
+    - Variáveis locais e globais 
+    - Funções Buit-in
+    - Funções str, int, float
+    - Funções usando outras Funções
+
+
+
+
+
+
 
 
 ## Condicionais
