@@ -133,14 +133,14 @@ print(nome)
 
 ```python
 numero = input("digite um numero qualquer:")
-printf(numero)
+print(numero)
 ```
 >5<br>
 
 **Existe tambem outra forma de formatar sua saída de dados que é bastante utilizada:**
 ```python
 numero = input("digite um numero qualquer:")
-printf("O numero informado foi {}" .format(numero))
+print("O numero informado foi {}" .format(numero))
 ```
 >O numero informado foi 5<br>
 
